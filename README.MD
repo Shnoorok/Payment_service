@@ -1,1 +1,1 @@
-# this is mock payment service, i have no idea how its going to work
+this is a mock payment service, I have no idea how it will work
