@@ -1,0 +1,15 @@
+[app_settings]
+app_port = 8000
+app_version = "1.0.0"
+app_name = "pay_service"
+app_host = "0.0.0.0"
+app_mount = "/api/v1"
+
+[db_settings]
+db_name = "payments"
+db_user = "user"
+db_password = "password"
+db_host = "127.0.0.1"  # можно использовать 'localhost'
+db_port = 5432
+
+DATABASE_URL = "postgresql://user:password@127.0.0.1:5432/payments"
