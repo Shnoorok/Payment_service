@@ -15,7 +15,7 @@ def configure_logging():
     # Настройка логирования для Alembic
     alembic_logger = logging.getLogger("alembic")
     alembic_logger.setLevel(logging.INFO)
-    alembic_logger.handlers = logging.getLogger().handlers  # Используем те же обработчики, что и для основного логгера
+    alembic_logger.handlers = logging.getLogger().handlers
 
     # Создание логгера с использованием structlog
     structlog.configure(

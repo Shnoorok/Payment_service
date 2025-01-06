@@ -1,7 +1,6 @@
 import pytest_asyncio
 import pytest
 from httpx import AsyncClient
-# from main import app
 from app.core.database import SessionLocal, engine, Base
 
 @pytest.fixture(scope="module")
@@ -11,7 +10,7 @@ def test_db():
     yield
     Base.metadata.drop_all(bind=engine)  # Удаляем их после завершения тестов
 
-@pytest_asyncio.fixture  # Эта часть важна! Инструктируем Pytest использовать asyncio.
+@pytest_asyncio.fixture
 async def async_client(test_db):  # Используем test_db как зависимость
     async with AsyncClient(base_url="http://localhost:8000") as client:
         yield client  # Возвращаем сам клиент

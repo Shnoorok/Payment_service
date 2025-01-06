@@ -1,7 +1,6 @@
 from fastapi import FastAPI, APIRouter, HTTPException
 from pydantic import BaseModel
 from app.core.database import Base, engine
-# from app.config.settings import settings
 from app.core.log_config import configure_logging
 from alembic.config import Config
 from alembic import command

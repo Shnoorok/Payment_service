@@ -14,7 +14,7 @@ class PaymentRepository:
     class PaymentRepository:
 
         async def get_payment_status(self, payment_id):
-            # Ваш код для получения статуса платежа
+            # код для получения статуса платежа
             async with self.db() as session:
                 payment = await session.get(Payment, payment_id)
                 if payment:

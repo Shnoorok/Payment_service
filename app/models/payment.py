@@ -22,4 +22,4 @@ class PaymentResponse(BaseModel):
     status: str
 
     class Config:
-        orm_mode = True  # Позволяет Pydantic работать с SQLAlchemy моделями
+        orm_mode = True
